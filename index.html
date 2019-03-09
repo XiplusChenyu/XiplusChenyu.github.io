@@ -3,52 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <title>Chenyu Xi's personal website</title>
+
     <link rel=stylesheet type=text/css href="css/style.css">
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+    <link rel=stylesheet type=text/css href="css/menu.css">
+git
+
+
 </head>
 <body class="page">
 <h1>Chenyu Xi</h1>
-
 <!--my list-->
-<ul>
+<ul id='menu' class="nav nav-pills">
     <li><a href="#home">Home Page</a></li>
-    <li><a href="#news">GitHub</a></li>
+    <li><a href="https://github.com/XiplusChenyu">My GitHub</a></li>
     <li><a href="#contact">Contact Me</a></li>
     <li><a href="#about">About</a></li>
-    <li class='resume'><a href="/res/resume/Resume-Chenyu%20Xi.pdf" download="ChenyuXi-resume.pdf">DownLoad My Resume</a></li>
+    <li id='resume' class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Resume Download<span class="caret"></span></a>
+        <ul class="dropdown-menu">
+            <li><a href="/res/resume/Resume-Chenyu%20Xi.pdf" download="ChenyuXi-resume-English.pdf">English</a></li>
+            <li><a href="/res/resume/Chinese%20Resume.pdf" download="ChenyuXi-resume-Chinese.pdf">Chinese</a></li>
+
+        </ul>
+    </li>
 </ul>
 
-<div>
+<br/>
+<div id="home">
     <p>THis website is under construction!</p>
 </div>
+
 </body>
 </html>
 
-<style>
-    ul {
-        list-style-type: none;
-        margin: 12px;
-        padding: 0;
-        background-color: #f1f1f1;
 
-    }
-    li
-    {
-        display:inline;
-    }
-    li a
-    {
-        display:inline-block;
-        width: auto;
-        text-decoration: none;
-        padding: 10px;
-    }
-    li a:hover {
-        background-color: #555;
-        color: white;
-    }
-    .resume a {
-        background-color: #377ba8;
-        color: white;
-        float: right;
-    }
-</style>
+<!--===============================================================================================-->
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->

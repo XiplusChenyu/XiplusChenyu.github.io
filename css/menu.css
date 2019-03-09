@@ -1,0 +1,29 @@
+#menu {
+    list-style-type: none;
+    background-color: aliceblue;
+}
+#menu li
+{
+    display:inline;
+    text-align: center;
+}
+#menu li a
+{
+    display:inline-block;
+    width: auto;
+    text-decoration: none;
+    padding: 10px;
+}
+#menu li a:hover {
+    background-color: steelblue;
+    color: white;
+}
+#menu #resume {
+    float: right;
+}
+#menu #resume a {
+    text-align: center;
+    background-color: #377ba8;
+    color: white;
+    width: 100%;
+}
