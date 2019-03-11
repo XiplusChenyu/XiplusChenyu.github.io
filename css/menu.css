@@ -27,3 +27,9 @@
     width: 100%;
 }
 
+#timeStamp{
+    width: 150px;
+    font-family: YuGothic;
+    text-align: center;
+    color: steelblue;
+}

@@ -2,6 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <title>Chenyu Xi's personal website</title>
 
     <link rel=stylesheet type=text/css href="css/style.css">
@@ -17,10 +19,12 @@
         <img src="img/icon.png" alt="Logo" style="width:40px">
     </a>
 
+    <div id="timeStamp"></div>
+
     <ul class="navbar-nav">
         <li><a href="#home">Home Page</a></li>
         <li><a href="https://github.com/XiplusChenyu">My GitHub</a></li>
-        <li><a href="#contact">Contact Me</a></li>
+        <li><a href="#contact" onclick="clickshow('contactCard')">Contact Me</a></li>
 
         <li id='resume' class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">My Resumes<span class="caret"></span></a>
@@ -33,22 +37,27 @@
     </ul>
 </nav>
 
-<h1 style="margin: 20px; color: #377ba8">Chenyu Xi </h1>
+
+<h1 style="margin: 20px; color: #377ba8">
+    Chenyu Xi
+</h1>
+
+
+<div id ='contactCard' class="card" style="width: 18rem; float: left; margin-left: 20px; display: none" onclick="this.style.display='none'">
+    <div class="card-body">
+        <h5 class="card-title">Contact</h5>
+        <h6 class="card-subtitle mb-2 text-muted"><a href="Mailto:xi.chenyu@columbia.edu">xi.chenyu@columbia.edu</a></h6>
+        <p class="card-text">Columbia master student major in Electrical Engineering | Data-Driven Analysis.<br/> Seeking 19 summer internship.</p>
+    </div>
+</div>
+<!--remove float use clear -->
+<div style="clear: both"></div>
 
 
 <div id="home">
     <p>This website is under construction!</p>
 </div>
 
-<div class="card" style="width: 18rem;">
-    <div class="card-body">
-        <h5 class="card-title">Contact</h5>
-        <h6 class="card-subtitle mb-2 text-muted">xi.chenyu@columbia.edu</h6>
-        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-        <a href="#" class="card-link">Card link</a>
-        <a href="#" class="card-link">Another link</a>
-    </div>
-</div>
 
 </body>
 </html>
@@ -59,4 +68,8 @@
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
 <!--===============================================================================================-->
+<script>
+    showTime();
+</script>
