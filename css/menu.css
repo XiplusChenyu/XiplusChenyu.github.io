@@ -22,7 +22,7 @@
 
 #menu .dropdown a {
     text-align: center;
-    width: calc(100%);
+    width: 100%;
 }
 
 #timeStamp{
