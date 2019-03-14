@@ -56,6 +56,8 @@ moneyAdder = function () {
     }
     info.className = "flash";
     moneyBag[people].push(money);
+    let textE = document.getElementById(people.toString());
+    textE.innerText = textE.innerText.split(' Empty Now')[0] + " $" + money.toString();
 
     let peopleName = peopleSelector.options[people].text;
     let voice = `You add $${money} for ${peopleName}!`;
@@ -70,14 +72,32 @@ function moneyRemover(){
     let people = peopleSelector.selectedIndex;
     let peopleName = peopleSelector.options[people].text;
     let money = moneyBag[people].pop();
+    let textE = document.getElementById(people.toString());
+
     let voice = '';
     if (money){
         info.className = "flash";
         voice = `You remove $${money} for ${peopleName}!`;
+
+
+
+        let test = moneyBag[people].join(" $");
+
+        if (moneyBag[people].length===0){
+            textE.innerText = textE.innerText.split(":")[0]+': Empty Now';
+        }
+
+        else{
+            textE.innerText = textE.innerText.split('$')[0]+"$" +test;
+        }
+
     }
     else {
         info.className = "error";
         voice = `${peopleName}'s moneybag is empty!`;
+        if (textE.innerText.split(' Empty Now').length===1){
+            textE.innerText = textE.innerText.split(":")[0]+': Empty Now';
+        }
     }
     info.innerText = voice;
     info.style.display = "block";
