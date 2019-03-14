@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Happy</title>
+
+    <link rel=stylesheet type=text/css href="css/style.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel=stylesheet type=text/css href="css/menu.css">
+    <link rel=stylesheet type=text/css href="css/todoPage.css">
+
+</head>
+<body class="page" onload="selectPeople()">
+
+<!--my list-->
+<nav id='menu' class="navbar navbar-expand-sm bg-light navbar-light">
+    <a class="navbar-brand" href="#">
+        <img src="img/icon.png" alt="Logo" style="width:40px">
+    </a>
+
+    <div id="timeStamp"></div>
+
+    <ul class="navbar-nav">
+        <li><a href="index.html">Home Page</a></li>
+        <li><a href="#" onclick="clickshow('info964')">Instruction</a></li>
+    </ul>
+</nav>
+
+
+<h1 style="margin: 20px; color: #377ba8">Happy 964</h1>
+
+<div id="info964" style="margin: auto; text-align: center; display: none;" onclick="clickshow('info964')">
+    <p class="flash"><b>Instruction:</b>
+        <br> This is a AA calculator! Push enter or "Add" to add money for selected person. Use <b>cancel</b>
+        to remove inputs you have made, you can hit it until the selected person's moneybag is empty. <br>Click me to hide.</p>
+</div>
+
+
+<div id="964input" class="login" style="text-align: center">
+    <h3>AA Calculator</h3>
+    <select id="people" onchange="getPeople()">
+        <option value="0" name="Chenyu Xi">Chenyu Xi</option>
+        <option value="1" name="Chen Huang">Chen Huang</option>
+        <option value="2" name="Tong Wu">Tong Wu</option>
+        <option value="3" name="Fan Li">Fan Li</option>
+    </select>
+    <input id= "inputMoney" placeholder="Value" style="border: inset; margin:20px; display: inline" onkeypress="EnterPress(event)">
+    <button id="addMoney" onclick="moneyAdder()">Add</button>
+    <br/>
+    <button onclick="moneyRemover()">Cancel</button>
+    <button onclick="getResult()">Get Result</button>
+</div>
+
+<div id="info" class="flash" style="display: none; margin: 20px"></div>
+
+<div id="964card" class="card" style="width: calc(80%); margin: auto; display: none; background-color: aliceblue">
+    <div class="card-body">
+        <h5 class="card-title">The Final Result</h5>
+        <ul id="resultList">
+        </ul>
+    </div>
+
+</div>
+
+
+
+</body>
+</html>
+
+
+<!--===============================================================================================-->
+<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="js/main.js"></script>
+<script src="js/964calc.js"></script>
+<!--===============================================================================================-->
+<script>
+    showTime();
+</script>
