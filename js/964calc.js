@@ -187,8 +187,9 @@ function getResult() {
     let resultList = document.getElementById('resultList');
     resultList.innerHTML = ''; //remove all list
     document.getElementById('964card').style.display = "block";
-    document.getElementById('info').style.display = "none";
+    document.getElementById('info').style.display = "block";
 
+    document.getElementById('info').innerText = `The average cost is $${average.toFixed(2)}`;
 
     for(let key in recorder){
         let people = result_bag[output[key]];
