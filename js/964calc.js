@@ -38,7 +38,7 @@ selectPeople = function () {
         let people = cookieFile.split('people_id=')[1].split(';')[0];
         peopleSelector.selectedIndex = parseInt(people);
     }catch (e) {
-        console.error(e);
+        console.error('No Cookie!');
     }
 };
 
@@ -207,11 +207,20 @@ function getResult() {
         }
 
     }
+}
 
+function reset() {
     moneyBag = {
         0: [],
         1: [],
         2: [],
         3: []
     };
+    for (let people in moneyBag){
+        let textE = document.getElementById(people.toString());
+        textE.innerText = textE.innerText.split(":")[0]+': Empty Now';
+    }
+    document.getElementById('964card').style.display = "none";
+    document.getElementById('info').style.display = "none";
+
 }
