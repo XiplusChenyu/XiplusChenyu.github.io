@@ -26,9 +26,27 @@
     width: 100%;
 }
 
-#timeStamp{
+#timeStamp {
     width: 150px;
     font-family: YuGothic;
     text-align: center;
     color: steelblue;
+}
+
+#info964 {
+    position: absolute;
+    box-sizing: border-box;
+    width: 50%;
+    top: 25%;
+    right: 25%;
+    overflow: scroll;
+    text-align: left;
+    opacity: 0.9;
+    animation-name: info;
+    animation-duration: 0.5s;
+}
+
+@keyframes info {
+    from {opacity: 0;}
+    to {opacity: 0.9;}
 }
