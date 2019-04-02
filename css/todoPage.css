@@ -1,5 +1,7 @@
 #loginBlock {
     margin: auto;
+    text-align: center;
     width: calc(40%);
-    background: black;
+    background: steelblue;
+    opacity: 0.1;
 }
