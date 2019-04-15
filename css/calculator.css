@@ -68,3 +68,21 @@
     font-family: 'Russo One', sans-serif;
     color: white;
 }
+
+#info964 {
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    right: 25%;
+    text-align: left;
+    font-family: sans-serif;
+    opacity: 1;
+    animation-name: info;
+    animation-duration: 0.3s;
+    background: #424c50;
+    box-shadow: 0 1px 3px black;
+    border-radius: 10px;
+    color: white;
+    padding: 15px;
+    z-index: 100;
+}
