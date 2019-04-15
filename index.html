@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Barlow+Condensed|Cinzel|Russo+One" rel="stylesheet">
 
     <title>Chenyu Xi's personal website</title>
     <link rel="icon" type="image/png" href="img/favicon.ico"/>
@@ -10,17 +11,17 @@
     <link rel=stylesheet type=text/css href="css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel=stylesheet type=text/css href="css/menu.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 <body class="page">
 
 <!--my list-->
-<nav id='menu' class="navbar navbar-expand-sm bg-light navbar-light">
+<nav id='menu' class="navbar navbar-expand-sm">
     <a class="navbar-brand" href="#">
-        <img src="img/icon.png" alt="Logo" style="width:40px">
+        <img src="img/icon.png" alt="Logo" style="width:40px; box-shadow: 0 1px 3px black; border-radius: 50%">
     </a>
 
-    <div id="timeStamp"></div>
 
     <ul class="navbar-nav">
         <li><a href="https://github.com/XiplusChenyu">GitHub</a></li>
@@ -34,7 +35,7 @@
                 <li><a href="https://d3n3sktne54bjw.cloudfront.net/index.html">ChatBot</a></li>
                 <li><a href="happy964.html">Happy 964</a></li>
                 <li><a href="http://nycjob.herokuapp.com">NYC Job Search</a></li>
-                <li><a href="todoPage.html">Todo Pages (Not Available Now)</a></li>
+                <li> <a href="https://dry-mountain-33107.herokuapp.com/">Online Note</a></li>
 
             </ul>
         </li>
@@ -50,34 +51,61 @@
 
 
     </ul>
+    <div id="timeStamp"></div>
+
 </nav>
 
 
-<h1 style="margin: 20px; color: #377ba8">
+
+<h1 style="margin: 20px; color: #CCCCCC; font-family: 'Russo One', sans-serif;">
     Chenyu Xi
 </h1>
 
 
-<div id ='contactCard' class="card" style="width: calc(80%); max-width:18rem; float: left; margin-left: 20px; display: none" onclick="this.style.display='none'">
+
+<!--remove float use clear -->
+<div style="clear: both"></div>
+<br>
+<div id='weblist' class="card border-dark text-center" style="width: calc(100% - 10em); margin: auto">
+    <div class="card-header text-white bg-dark">Take a look at my works</div>
     <div class="card-body">
-        <h5 class="card-title">Contact</h5>
+        <blockquote class="blockquote mb-0 text-white ">
+            <p style="font-size: 18px">Walking on water and developing software from a specification are easy if both are frozen</p>
+            <footer class="blockquote-footer">
+                <small class="text-muted">
+                    Edward V Berard
+                </small>
+            </footer>
+        </blockquote>
+        <br>
+
+        <ul class="list-group">
+            <li class="list-group-item bg-light">
+                <a href="https://d3n3sktne54bjw.cloudfront.net/index.html">An AI chatbot build on Yelp API and AWS</a>
+            </li>
+            <li class="list-group-item ">
+                <a href="happy964.html">Happy 964: A calculator helps 5A roommates dealing with their bills</a>
+            </li>
+            <li class="list-group-item bg-light">
+                <a href="http://nycjob.herokuapp.com">A job search application basing on Flask and PostgreSQL</a>
+            </li>
+            <li class="list-group-item">
+                <a href="https://dry-mountain-33107.herokuapp.com/">An online notebook with medium editor</a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<br>
+
+
+<div id ='contactCard' class="card text-white bg-dark mb-3" style="width: calc(80%); max-width:23rem; float: left; margin-left: 20px; display: none" onclick="this.style.display='none'">
+    <div class="card-header">Contact</div>
+    <div class="card-body">
         <h6 class="card-subtitle mb-2 text-muted"><a href="Mailto:xi.chenyu@columbia.edu">xi.chenyu@columbia.edu</a></h6>
         <p class="card-text">Columbia master student major in Electrical Engineering | Data-Driven Analysis.<br/> Seeking 19 summer internship.</p>
     </div>
 </div>
-<!--remove float use clear -->
-<div style="clear: both"></div>
-
-
-<div id="home">
-    <p>This website is under construction!</p>
-    <ul>
-        <li><a href="https://d3n3sktne54bjw.cloudfront.net/index.html">An AI chatbot build on Yelp API and AWS</a></li>
-        <li><a href="happy964.html">Happy 964: A calculator helps 5A roommates dealing with their bills</a></li>
-        <li><a href="http://nycjob.herokuapp.com">A job search application basing on Flask and PostgreSQL</a></li>
-    </ul>
-</div>
-
 
 </body>
 </html>
