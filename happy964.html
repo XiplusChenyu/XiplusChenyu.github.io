@@ -2,16 +2,17 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=0.8">
 
     <title>Happy</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <link rel="icon" type="image/png" href="img/robot_icon.ico"/>
-    <link href="https://fonts.googleapis.com/css?family=Anton|Cinzel" rel="stylesheet">
-    <link rel=stylesheet type=text/css href="css/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Anton|Barlow+Condensed|Cinzel|Russo+One" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel=stylesheet type=text/css href="css/menu.css">
-    <link rel=stylesheet type=text/css href="css/todoPage.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link rel=stylesheet type=text/css href="css/style.css">
+    <link rel=stylesheet type=text/css href="css/calculator.css">
 
 </head>
 <body class="page" onload="selectPeople()">
@@ -31,56 +32,64 @@
 </nav>
 
 
-<h1 style="margin: 20px; color: #377ba8">Happy 964</h1>
+<h1 style="margin: 20px; color: #CCCCCC; font-family: 'Russo One', sans-serif;">
+    Happy 964
+</h1>
 
 <div id="info964" style="display: none;" onclick="clickshow('info964')">
-    <p class="flash">
-        <b>Instruction:</b>
+    <p>
+        <b style="font-size: larger">Instruction:</b>
+        <br>
         <br>   This is a AA calculator! Push enter or "Add" to add money for selected person.
         <br>   Use <b>cancel</b> to remove inputs you have made, you can hit it until the selected person's moneybag is empty.
         <br>   Click me to hide.
     </p>
 </div>
 
-
-<div id="964input" class="login" style="text-align: center">
-    <h3>AA Calculator</h3>
-    <select id="people" onchange="getPeople()">
-        <option value="0" name="Chenyu Xi">Chenyu Xi</option>
-        <option value="1" name="Chen Huang">Chen Huang</option>
-        <option value="2" name="Tong Wu">Tong Wu</option>
-        <option value="3" name="Fan Li">Fan Li</option>
-    </select>
-    <input id= "inputMoney" placeholder="Value" style="border: inset; margin:20px; display: inline" onkeypress="EnterPress(event)">
-    <button id="addMoney" onclick="moneyAdder()">Add</button>
-    <br/>
-    <button onclick="moneyRemover()">Cancel</button>
-    <button onclick="getResult()">Get Result</button>
-    <button onclick="reset()">Restart</button>
-</div>
-
-<div id="info" class="flash" style="display: none; margin: 20px"></div>
-
-<div id="964card" class="card" style="width: calc(80%); margin: auto; display: none; background-color: aliceblue">
+<div id="964input" class="card text-center input964">
+    <div class="card-header text-light">
+        AA Calculator
+    </div>
     <div class="card-body">
-        <h5 class="card-title">The Final Result</h5>
-        <ul id="resultList">
+        <h5 class="card-title">Input Values Here</h5>
+            <select id="people" onchange="getPeople()">
+                <option value="0" name="Chenyu Xi">Chenyu Xi</option>
+                <option value="1" name="Chen Huang">Chen Huang</option>
+                <option value="2" name="Tong Wu">Tong Wu</option>
+                <option value="3" name="Fan Li">Fan Li</option>
+            </select>
+            <input id= "inputMoney" placeholder="0" style="border: inset; margin:20px; display: inline" onkeypress="EnterPress(event)">
+            <div class="row row-centered" style="margin: auto">
+                <div class="col"></div>
+                <button class="btn btn-1" onclick="moneyRemover()">Cancel</button>
+                <button class="btn btn-2" onclick="getResult()">Get Result</button>
+                <button class="btn btn-3" onclick="reset()">Restart</button>
+                <button id="addMoney" class="btn" onclick="moneyAdder()">Add</button>
+                <div class="col"></div>
+            </div>
+        <div id="info" class="card-footer" style="display: none; margin: 20px"></div>
+    </div>
+    <div id="964card" class="card-footer" style="display: none">
+            <h5 id="resultTitle">The Final Result</h5>
+            <ul id="resultList">
+            </ul>
+    </div>
+    <div class="card-header" style="color:white">Money Bags</div>
+    <div id ='bagCard' class="card-body">
+        <ul id="bags" class="list-group list-group-flush" style="background: black">
+            <li id="0"  class="list-group-item bg-dark">Chenyu Xi: Empty Now</li>
+            <li id="1"  class="list-group-item bg-light text-dark">Chen Huang: Empty Now</li>
+            <li id="2"  class="list-group-item bg-dark">Tong Wu: Empty Now</li>
+            <li id="3"  class="list-group-item bg-light text-dark">Fan Li: Empty Now</li>
         </ul>
     </div>
-
 </div>
 
-<div id ='bagCard' class="login">
-    <div class="card-body">
-        <h5 class="card-title">Money Bags</h5>
-        <ul id="bags">
-            <li id="0">Chenyu Xi: Empty Now</li>
-            <li id="1">Chen Huang: Empty Now</li>
-            <li id="2">Tong Wu: Empty Now</li>
-            <li id="3">Fan Li: Empty Now</li>
-        </ul>
-    </div>
-</div>
+
+
+
+
+
 
 
 

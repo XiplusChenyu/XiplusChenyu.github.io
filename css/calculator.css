@@ -1,0 +1,70 @@
+.input964{
+    width: 90%;
+    box-shadow: 0 1px 3px black;
+    background: #41555d;
+    margin: auto;
+}
+
+.input964 .card-body{
+    background: #424c50;
+    color: white;
+}
+
+#addMoney{
+    background: #336699;
+    color: white;
+    box-shadow: 0 1px 3px black;
+}
+
+#people{
+    border-radius: 5px;
+    height: 40px;
+    font-family: 'Russo One', sans-serif;
+    box-shadow: 0 1px 3px black;
+
+  }
+#inputMoney{
+    border-radius: 5px;
+    height: 40px;
+    box-shadow: 0 1px 3px black;
+}
+
+.btn{
+    box-shadow: 0 1px 3px black;
+    margin-left: 10px;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+.btn-1{
+    background: #993333;
+    color:white;
+    box-shadow: 0 1px 3px black;
+}
+
+.btn-2{
+    background: #666666;
+    color:white;
+    box-shadow: 0 1px 3px black;
+}
+
+.btn-3{
+    background: #996633;
+    color:white;
+    box-shadow: 0 1px 3px black;
+}
+
+.row{
+    align-content: center;
+}
+
+#resultList{
+    list-style:none;
+    margin: auto;
+    color: white;
+
+}
+
+#resultTitle{
+    font-family: 'Russo One', sans-serif;
+    color: white;
+}

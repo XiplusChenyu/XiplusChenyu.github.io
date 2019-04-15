@@ -15,7 +15,8 @@ body {
 {
     margin: 2em auto;
     width:calc(100% - 4em);
-    height:calc(100% - 4em);
+    min-height:calc(100% - 4em);
+    height: fit-content;
     border: 10px solid #666666;
     box-shadow: 0 1px 3px black;
     padding: 0.8em;
@@ -25,9 +26,9 @@ body {
 }
 .metanav        { text-align: left; font-size: 12em; padding: 0.3em;
                     margin-bottom: 1em; background: #fafafa;}
-.flash          { background: #cee5F5; padding: 0.5em;
-                    border: 1px solid #aacbe2; }
-.error          { background: #f0d6d6; padding: 0.5em; }
+.flash          { background:  #336699; padding: 0.5em;
+                    border: 1px solid  #336699; box-shadow: 0 1px 3px black;}
+.error          { background: #993333; padding: 0.5em; box-shadow: 0 1px 3px black;}
 .picture        { margin: 2em auto; width: 55em; border: 1px solid #ccc;
                     padding: 0.8em; background: white; }
 .login        { margin: 2em auto; max-width: 35em; width: 80%; border: 1px solid #ccc;
@@ -66,22 +67,43 @@ body {
 
 }
 
-.list-group{
+.ipage .list-group{
     background: #41555d;
 
 }
 
-.list-group-item{
+.ipage .list-group-item{
     font-family: 'Barlow Condensed', sans-serif;
     font-size: larger;
 }
 
-.list-group-item a{
+.ipage .list-group-item a{
     color: #424c50;
 
 }
 
-.list-group-item a:hover{
+.ipage .list-group-item a:hover{
     text-decoration: none;
     color: black;
 }
+
+
+
+#info964 {
+    position: absolute;
+    width: 50%;
+    top: 25%;
+    right: 25%;
+    text-align: left;
+    font-family: sans-serif;
+    opacity: 1;
+    animation-name: info;
+    animation-duration: 0.3s;
+    background: #424c50;
+    box-shadow: 0 1px 3px black;
+    border-radius: 10px;
+
+    color: white;
+    padding: 15px;
+}
+
