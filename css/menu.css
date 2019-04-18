@@ -41,14 +41,18 @@
     background: #424c50;
 }
 
+
 .navbar-nav > li a:hover{
     background: #41555d !important;
+    font-size: larger;
 }
 
 
 .navbar-nav > li a{
     font-family: 'Cinzel', serif;
     color: white;
+    transition-duration: 0.3s;
+    transform-style: preserve-3d;
 }
 
 .dropdown-menu li a {

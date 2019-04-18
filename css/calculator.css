@@ -34,6 +34,13 @@
     margin-left: 10px;
     border-radius: 5px;
     box-sizing: border-box;
+    -webkit-transition: font-size 0.5s; /* Safari */
+    transition: font-size 0.5s;
+    transform-style: preserve-3d;
+}
+
+.btn:hover{
+    font-size: larger;
 }
 .btn-1{
     background: #993333;
@@ -42,7 +49,7 @@
 }
 
 .btn-2{
-    background: #666666;
+    background: #888888;
     color:white;
     box-shadow: 0 1px 3px black;
 }
