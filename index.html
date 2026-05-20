@@ -2,82 +2,75 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=0.8">
-
-    <link href="https://fonts.googleapis.com/css?family=Anton|Barlow+Condensed|Cinzel|Russo+One" rel="stylesheet">
-
-    <title>Chenyu Xi's personal website</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chenyu Xi | Personal Profile</title>
     <link rel="icon" type="image/png" href="img/favicon.ico"/>
-
-    <link rel=stylesheet type=text/css href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <link rel=stylesheet type=text/css href="css/menu.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
+    <link rel="stylesheet" type="text/css" href="css/menu.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body class="page">
-
-<nav id='menu' class="navbar navbar-expand-sm">
-    <a class="navbar-brand" href="#">
-        <img src="img/icon.png" alt="Logo" style="width:40px; box-shadow: 0 1px 3px black; border-radius: 50%">
+<nav id="menu" class="navbar navbar-expand-sm profile-nav">
+    <a class="navbar-brand" href="#top">
+        <img src="img/icon.png" alt="Chenyu Xi logo" class="brand-icon">
     </a>
 
-
     <ul class="navbar-nav">
+        <li><a href="#about">About</a></li>
+        <li><a href="#focus">Focus</a></li>
         <li><a href="https://github.com/XiplusChenyu" target="_blank" rel="noopener noreferrer">GitHub</a></li>
-        <li><a href="https://cn.linkedin.com/in/chenyu-xi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
-        <li><a href="#contact" onclick="clickshow('contactCard')">Contact Me</a></li>
-
-        <li id='resume' class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Download Resumes<span class="caret"></span></a>
-            <ul class="dropdown-menu">
-                <li><a href="/res/resume/Chenyu%20Xi's%20resume.pdf" download="ChenyuXi-resume-English.pdf">English Resume</a></li>
-                <li><a href="/res/resume/奚晨雨的简历.pdf" download="ChenyuXi-resume-Chinese.pdf">中文简历</a></li>
-                <li><a href="/res/resume/Transcripts%20of%20Chenyu%20Xi.pdf" download="ChenyuXi-Transcripts.pdf">Transcripts</a></li>
-            </ul>
-        </li>
+        <li><a href="https://linkedin.com/in/chenyu-xi" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+        <li><a href="#contact" onclick="clickshow('contactCard')">Contact</a></li>
     </ul>
-    <div id="timeStamp"></div>
 
+    <div id="timeStamp" class="timestamp"></div>
 </nav>
 
-<section class="hero card border-0">
-    <div class="hero-body">
-        <h1>Chenyu Xi</h1>
-        <p class="headline">Software Engineer · Data-Driven Builder · Columbia University EE</p>
-        <p class="intro-en">I build reliable software products with strong engineering fundamentals, fast iteration, and a user-first mindset. My focus areas include full-stack development, data analysis, and practical AI applications.</p>
-        <p class="intro-zh">我专注于构建可靠、实用、可快速迭代的软件产品，擅长全栈开发、数据分析与 AI 应用落地，注重工程质量和用户体验。</p>
-        <div class="hero-actions">
-            <a class="btn btn-outline-light" href="https://cn.linkedin.com/in/chenyu-xi" target="_blank" rel="noopener noreferrer">View LinkedIn</a>
-            <a class="btn btn-info" href="https://github.com/XiplusChenyu" target="_blank" rel="noopener noreferrer">Explore GitHub</a>
+<main id="top" class="profile-main">
+    <section class="hero-v2">
+        <p class="eyebrow">CHENYU XI</p>
+        <h1>Engineer profile redesigned from scratch.</h1>
+        <p class="lead-text">I focus on product-minded software engineering, cross-functional execution, and building practical systems that stay reliable under real-world constraints.</p>
+        <div class="cta-row">
+            <a class="btn btn-light" href="https://linkedin.com/in/chenyu-xi" target="_blank" rel="noopener noreferrer">View LinkedIn Profile</a>
+            <a class="btn btn-outline-light" href="https://github.com/XiplusChenyu" target="_blank" rel="noopener noreferrer">Visit GitHub</a>
         </div>
-    </div>
-</section>
+    </section>
 
-<section id='weblist' class="card border-dark text-center">
-    <div class="card-header text-white bg-dark">About Me</div>
-    <div class="card-body">
-        <ul class="ipage list-group">
-            <li class="ipage list-group-item bg-light">Master's degree in Electrical Engineering from Columbia University.</li>
-            <li class="ipage list-group-item">Hands-on experience in software engineering, APIs, data products, and cloud deployment.</li>
-            <li class="ipage list-group-item bg-light">Strong interest in building impactful products with modern AI + engineering workflows.</li>
-            <li class="ipage list-group-item">Open to software engineering opportunities and technical collaborations.</li>
-        </ul>
-    </div>
-</section>
+    <section id="about" class="panel">
+        <h2>About</h2>
+        <p>I am Chenyu Xi, an engineer with an Electrical Engineering graduate background and a strong interest in turning ideas into usable products. I value clear communication, measurable impact, and fast feedback loops.</p>
+        <p>My working style combines software craftsmanship with a user-centered perspective: ship quickly, validate early, and continuously improve stability and quality.</p>
+    </section>
 
-<div id ='contactCard' class="card text-white bg-dark mb-3" style="width: calc(80%); max-width:23rem; float: left; margin-left: 20px; display: none" onclick="this.style.display='none'">
+    <section id="focus" class="panel split">
+        <div>
+            <h2>Current Focus</h2>
+            <ul>
+                <li>Full-stack software delivery and API-centric system design.</li>
+                <li>Data-informed product decisions and analytics workflows.</li>
+                <li>Practical AI integration for real business use cases.</li>
+                <li>Collaboration across engineering, product, and stakeholders.</li>
+            </ul>
+        </div>
+        <div class="note-box">
+            <h3>Positioning</h3>
+            <p>Open to software engineering opportunities where ownership, execution speed, and product thinking are equally valued.</p>
+        </div>
+    </section>
+</main>
+
+<div id="contactCard" class="card text-white bg-dark mb-3 contact-card" onclick="this.style.display='none'">
     <div class="card-header">Contact</div>
     <div class="card-body">
-        <h6 class="card-subtitle mb-2 text-muted"><a href="Mailto:xi.chenyu@columbia.edu">xi.chenyu@columbia.edu</a></h6>
-        <p class="card-text">Software engineer with data-driven thinking.<br/>Seeking impactful product and platform work.</p>
+        <h6 class="card-subtitle mb-2 text-muted"><a href="mailto:xi.chenyu@columbia.edu">xi.chenyu@columbia.edu</a></h6>
+        <p class="card-text">Thanks for visiting.<br/>Feel free to connect on LinkedIn or email me directly.</p>
     </div>
 </div>
 
-</body>
-</html>
-
-<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
@@ -85,3 +78,5 @@
 <script>
     showTime();
 </script>
+</body>
+</html>
