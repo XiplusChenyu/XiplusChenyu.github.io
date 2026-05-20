@@ -1,44 +1,49 @@
-:root {
-    --bg: #070b16;
-    --panel: rgba(17, 25, 44, 0.72);
-    --line: rgba(126, 179, 255, 0.38);
-    --text: #eaf2ff;
-    --muted: #9eb5d7;
-    --accent: #5fd0ff;
+body            { font-family: sans-serif; background: #0b1020; }
+a, h1, h2       { color: #9fd6ff; }
+h1, h2          { font-family: YuGothic, serif; margin: 0;}
+h1              { border-bottom: 2px solid transparent; }
+h2              { font-size: 1.2em; }
+
+html {
+    height:100%;
 }
-
-* { box-sizing: border-box; }
-
 body {
-    margin: 0;
-    min-height: 100vh;
-    background: radial-gradient(circle at 15% 20%, #213564 0%, #0e1630 35%, var(--bg) 100%);
-    color: var(--text);
-    font-family: 'Inter', sans-serif;
+    height:90%;
 }
 
-.page {
-    width: min(1100px, calc(100% - 2rem));
-    margin: 1.2rem auto;
-    padding: 1.2rem;
-    border: 1px solid #1d2a4b;
-    box-shadow: 0 0 30px rgba(40, 96, 188, 0.28);
-    border-radius: 20px;
-    background: rgba(5, 10, 22, 0.65);
+.page
+{
+    margin: 2em auto;
+    width:calc(100% - 4em);
+    min-height:calc(100% - 4em);
+    height: fit-content;
+    border: 1px solid #2e3e66;
+    box-shadow: 0 0 16px rgba(72, 150, 255, 0.35);
+    padding: 0.8em;
+    background: radial-gradient(circle at top right, #1b2b59 0%, #12172b 45%, #0b1020 100%);
+    font-family: 'Cinzel', serif;
+
 }
 
-.topbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1.5rem;
+.navbar{
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
 }
 
-.brand { display: flex; align-items: center; gap: 0.9rem; }
-.avatar { width: 54px; height: 54px; border-radius: 50%; border: 2px solid #6ebdff; }
-.name { margin: 0; font-size: 1.2rem; font-weight: 800; font-family: 'Space Grotesk', sans-serif; }
-.tag { margin: 0; color: var(--muted); font-size: 0.9rem; }
+.navbar-nav > li{
+    margin-left: 5px;
+    border-radius: 2px;
+    background: rgba(48, 69, 115, 0.85);
+    box-shadow: 0 1px 3px black;
+}
+
+#contactCard{
+   background: #1f2b49;
+    box-shadow: 0 1px 3px black;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+    right: 25%;
+    z-index: 100;
 
 .top-actions a {
     color: #b9deff;
@@ -58,48 +63,56 @@ body {
     padding: 1.2rem;
 }
 
-.section-label {
-    margin: 0 0 0.4rem;
-    color: #8ccaff;
-    letter-spacing: 0.18em;
-    font-size: 0.75rem;
+.hero {
+    width: calc(100% - 10em);
+    margin: 24px auto;
+    background: linear-gradient(130deg, rgba(87, 188, 255, 0.25), rgba(101, 111, 255, 0.2));
+    border: 1px solid rgba(141, 208, 255, 0.45);
+    color: #e8f4ff;
 }
 
-h1, h2, h3 { font-family: 'Space Grotesk', sans-serif; }
-h1 { font-size: clamp(1.5rem, 3.2vw, 2.3rem); margin-bottom: 0.85rem; }
-h2 { font-size: 1.45rem; margin-bottom: 0.8rem; }
-
-p { color: #dbe9ff; line-height: 1.7; }
-
-.cta-row { margin-top: 1.1rem; display: flex; flex-wrap: wrap; gap: 0.7rem; }
-.btn-neon {
-    background: linear-gradient(120deg, #2d89ff, #56d8ff);
-    color: #031126;
-    font-weight: 700;
-}
-.btn-ghost {
-    color: #d8edff;
-    border: 1px solid #7cc8ff;
+.hero-body {
+    padding: 2rem;
 }
 
-.resume-panel ul { margin: 0; padding-left: 1.1rem; }
-.resume-panel a { color: #9fdaff; }
-.resume-panel a:hover { color: #ffffff; }
-
-.focus-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 0.85rem;
+.hero h1 {
+    color: #ffffff;
+    font-family: 'Russo One', sans-serif;
+    font-size: 2.4rem;
+    margin-bottom: 0.5rem;
 }
-.focus-grid article {
-    border: 1px solid rgba(124, 182, 255, 0.35);
-    border-radius: 12px;
-    padding: 0.9rem;
-    background: rgba(14, 28, 56, 0.65);
+
+.headline {
+    color: #9ad8ff;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.35rem;
+}
+
+.intro-en, .intro-zh {
+    margin-top: 1rem;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 1.15rem;
+}
+
+.hero-actions {
+    margin-top: 1.25rem;
 }
 .focus-grid p { margin: 0; color: #ccdef7; }
 
-@media (max-width: 760px) {
-    .topbar { flex-direction: column; align-items: flex-start; }
-    .top-actions a { margin-left: 0; margin-right: 0.45rem; }
+.hero-actions .btn {
+    margin-right: 10px;
+}
+
+#weblist{
+    width: calc(100% - 10em);
+    margin: auto;
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.45);
+    background: rgba(24, 37, 66, 0.85);
+
+}
+
+.ipage .list-group-item{
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: larger;
+    color: #1d2948;
 }
